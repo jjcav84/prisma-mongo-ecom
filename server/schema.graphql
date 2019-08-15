@@ -1,0 +1,22 @@
+type Product {
+  id: ID!
+  available: Boolean!
+  price: String!
+  count: Int!
+}
+
+type Cart {
+  id: ID!
+  catalog: [Product!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  cart: [Cart!]!
+}
+
+type Query {
+  Users: [User!]!
+}

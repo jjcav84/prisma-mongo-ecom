@@ -1,0 +1,14 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+schema: server/schema.graphql
+exec:
+  filename: server/generated.go
+model:
+  filename: models_gen.go
+resolver:
+  # goal: copy&paste from generated file
+  filename: tmp/resolver.go
+  type: Resolver
