@@ -1,0 +1,18 @@
+type Product {
+  id: ID! @id
+  available: Boolean!
+  price: String!
+  count: Int!
+}
+
+type Cart {
+  id: ID! @id
+  catalog: [Product!]! @relation(link: INLINE)
+}
+
+type User {
+  id: ID! @id
+  name: String!
+  email: String!
+  cart: [Cart!]! @relation(link: INLINE)
+}
